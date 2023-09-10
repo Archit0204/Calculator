@@ -14,6 +14,18 @@ body{
     align-items: center;
 }
 
+h1{
+    background-color: #373737;
+    color:white;
+    direction: rtl;
+    font-size: 50px;
+    position: absolute;
+    top: 10%;
+    left: 6%;
+    height: 50px;
+    width: 280px;
+}
+
 .main{
     height: 600px;
     width: 400px;
@@ -28,6 +40,7 @@ body{
     height: 80px;
     border-radius: 40px;
     background-color: #373737;
+    font-family: 'Roboto', sans-serif;
     border: none;
     outline: none;
     position: relative;

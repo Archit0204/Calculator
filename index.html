@@ -5,33 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Images/calculator.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Calculator</title>
 </head>
 <body>
     <div class="main">
-            <input type="text" class="screen" name="" id="">
+            <div class="screen">
+                <h1>0</h1>
+            </div>
+            <!-- <input type="text" class="screen" name="" id=""> -->
             <div class="keys">
-                <button class="btn grey">AC</button>
+                <button class="btn grey" id="AC" >AC</button>
                 <button class="btn grey">+/-</button>
                 <button class="btn grey">%</button>
-                <button class="btn orange">÷</button>
-                <button class="btn dark">1</button>
-                <button class="btn dark">2</button>
-                <button class="btn dark">3</button>
-                <button class="btn orange">x</button>
-                <button class="btn dark">4</button>
-                <button class="btn dark">5</button>
-                <button class="btn dark">6</button>
-                <button class="btn orange">-</button>
-                <button class="btn dark">7</button>
-                <button class="btn dark">8</button>
-                <button class="btn dark">9</button>
-                <button class="btn orange">+</button>
-                <button class="btn dark" id="spanned">0</button>
+                <button class="btn orange" id="div" onclick="buildExpression('/')">÷</button>
+                <button class="btn dark num" value="1" onclick="displayNum(1)">1</button>
+                <button class="btn dark num" value="2" onclick="displayNum(2)">2</button>
+                <button class="btn dark num" value="3" onclick="displayNum(3)">3</button>
+                <button class="btn orange" id="mul" onclick="buildExpression('*')">x</button>
+                <button class="btn dark num" value="4" onclick="displayNum(4)">4</button>
+                <button class="btn dark num" value="5" onclick="displayNum(5)">5</button>
+                <button class="btn dark num" value="6" onclick="displayNum(6)">6</button>
+                <button class="btn orange" id="sub" onclick="buildExpression('-')">-</button>
+                <button class="btn dark num" value="7" onclick="displayNum(7)">7</button>
+                <button class="btn dark num" value="8" onclick="displayNum(8)">8</button>
+                <button class="btn dark num" value="9" onclick="displayNum(9)">9</button>
+                <button class="btn orange" id="add" onclick="buildExpression('+')">+</button>
+                <button class="btn dark num" id="spanned" value="0" onclick="displayNum(0)">0</button>
                 <button class="btn dark">.</button>
-                <button class="btn orange">=</button>
+                <button class="btn orange" id="equal" onclick="evaluateExpression()">=</button>
                 <!-- <button class="btn orange">c</button> -->
             </div>
     </div>
+    <script src="./index.js"></script>
 </body>
 </html>
